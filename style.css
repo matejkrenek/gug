@@ -21,6 +21,8 @@
     --h3-mobile-size: 24px;
     --label-bigger-mobile-size: 20px;
 
+    --gutter: 32px
+
 }
 
 body{
@@ -118,7 +120,7 @@ a{
 
 .app-wrapper{
     display: grid;
-    grid-template-columns: 24px 1fr 24px;
+    grid-template-columns: var(--gutter) 1fr var(--gutter);
 }
 
 .app-wrapper > *{
@@ -151,7 +153,7 @@ a{
     .hamburger{
         position: absolute;
         top: 50%;
-        right: 32px;
+        right: var(--gutter);
         transform: translate(0%, -50%);
         cursor: pointer;
     }
@@ -179,8 +181,10 @@ a{
 
     .homePage__section h1{
         font-size: var(--h1-mobile-size);
-        margin-bottom: 64px;
+    }
 
+    .homePage__section h1:nth-child(3){
+        margin-bottom: 64px;
     }
 
     .homePage__section a.btn{
@@ -204,14 +208,16 @@ a{
 }
 
     .eventPack{
-        position: relative;
+        display: grid;
         width: 100%;
-        margin-bottom: 36px;
-        padding: 0 24px;
+        grid-template-columns: var(--gutter) repeat(3, 1fr) var(--gutter);
         overflow-x: scroll;
-        display: flex;
-        flex-wrap: nowrap;
-
+        margin-bottom: 36px;
+    }
+    
+    .eventPack::before,
+    .eventPack::after {
+        content: '';
     }
 
     .eventPack::-webkit-scrollbar{
@@ -219,17 +225,17 @@ a{
     }
 
         .eventCard{ 
-            min-width: 95%;
-            max-width: 500px;
+            min-width: 390px;
+            margin-right: 16px;
             display: flex;
             flex-direction: column;
             border: 2px solid var(--border-card-color);
             border-radius: 4px;
-            margin-right: 16px;
+            
         }
 
         .eventCard:last-child{
-            
+            margin-right: 0px;
         }
 
 
@@ -465,7 +471,7 @@ a{
         .passionateCard p{
             margin-top: 16px;
             font-size: var(--label-mobile-size);
-            padding-right: 40px;
+            padding-right: 30px;
             color: var(--dark-grey);
         }
 
@@ -511,7 +517,7 @@ a{
     }
 
         .citiesLinks li p{
-            margin: 0 16px 0;
+            margin: 0 16px 16px;
             font-size: var(--label-bigger-mobile-size);
             color: var(--grey);
             cursor: pointer;
@@ -669,12 +675,16 @@ a{
         color: var(--dark-grey);
     }
 
-@media (max-width: 425px){
+@media (max-width: 440px){
     :root{
-        --h1-mobile-size: 36px;
+        --h1-mobile-size: 40px;
         --label-mobile-size: 14px;
         --h3-mobile-size: 20px;
         --label-bigger-mobile-size: 16px;
+    }
+
+    .eventCard{ 
+        min-width: 350px;
     }
 
     .citiesBubbles img{
@@ -692,21 +702,40 @@ a{
             width: 200px;
 
         }
-}
-
-@media (max-width: 400px){
-    :root{
-        --h1-mobile-size: 34px;
-        --label-mobile-size: 12px;
-        --h3-mobile-size: 18px;
-        --label-bigger-mobile-size: 14px;
+    
+    .passionateCard p{
+        padding-right: 0px;
     }
 }
 
-@media (max-width: 350px){
+@media (max-width: 405px){
+    :root{
+        --h1-mobile-size: 36px;
+        --label-mobile-size: 12px;
+        --h3-mobile-size: 18px;
+        --label-bigger-mobile-size: 16px;
+    }
+
+    .eventCard{ 
+        min-width: 310px;
+    }
+
+}
+
+@media (max-width: 375px){
+    :root{
+        --h1-mobile-size: 34px;
+        --label-mobile-size: 10px;
+        --h3-mobile-size: 18px;
+        --label-bigger-mobile-size: 14px;
+    }
     .eventMore{
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .eventCard{ 
+        min-width: 290px;
     }
 
     .eventMore img{
