@@ -380,6 +380,7 @@ a{
             font-size: var(--label-mobile-size);
         }
     .communityImages{
+        width: 100%;
         position: relative;
         height: 400px;
         display: flex;
