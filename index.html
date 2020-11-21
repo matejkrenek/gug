@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <title>GUG</title>
+    <link rel="icon" href="./svgs/Ulogo.svg">
+    <title>Česká Google User Group - GUG.cz</title>
 </head>
 <body>
 
@@ -98,8 +99,9 @@
         <!-- END EVENT SECTION -->
 
         <!-- START COMMUNITY SECTION -->
-        <section class="community-section">
-            <h1>Buď součástí komunity, staň se GUGerem!</h1>
+        <section class="community-section full">
+            <h1>Buď součástí komunity,</h1>
+            <h1>staň se GUGerem!</h1>
             <div class="communityButton__container">
                 <a href="#" class="btn blue">Gugeři</a>
                 <a href="#" class="btn outline-blue">Chci se přidat</a>
@@ -111,13 +113,7 @@
                         <p>aktivních</br> členů</p>
                     </div>
                 </div>
-                <img class="person-1 abs" src="./images/person1.png" alt="">
-                <img class="person-2 abs" src="./images/person2.png" alt="">
-                <img class="person-3 abs" src="./images/person3.png" alt="">
-                <img class="person-4 abs" src="./images/person4.png" alt="">
-                <img class="person-5 abs" src="./images/person5.png" alt="">
-                <img class="ghost abs" src="./svgs/ghost.svg" alt="">
-                <img class="packman abs" src="./svgs/pacman.svg" alt="">
+                <img src="./images/communityMembers.png" alt="">
             </div>
         </section>
         <!-- END COMMUNITY SECTION -->
@@ -175,6 +171,7 @@
                 <img src="./svgs/brnoBubble.svg" alt="">
             </div>
             <h1>Jsme již ve 14 městech</h1>
+            <h1>a stále rosteme</h1>
             <ul class="citiesLinks">
                 <li class="active"><p href="#">Praha</p></li>
                 <li><p href="#">Brno</p></li>
@@ -198,7 +195,7 @@
         <!-- START PARTNERS SECTION -->
         <section class="partners-section">
             <h4>partneři</h4>
-            <div class="partersLogos">
+            <div class="partnersLogos">
                 <img class="partnerLogo" src="./images/googleLogo.png" alt="">
                 <img class="partnerLogo" src="./images/Integromat.png" alt="">
                 <img class="partnerLogo" src="./images/Dotekománie.png" alt="">
@@ -209,10 +206,19 @@
 
         <!-- START NOTIOFICATION SECTION -->
         <section class="notification-section">
-            <h1>Nenech si uniknout nové eventy!</h1>
+            <img class="desktopOnly" src="./svgs/sunIcon.svg" alt="">
+            <h1>Nenech si uniknout</h1>
+            <h1>nové eventy!</h1>
             <p>Přihlaš se k nášemu newsletteru a buď informován o nejnovějších eventech a dění v GUG.</p>
             <form class="notificationForm">
-                <input type="email" class="emailInput" name="email" placeholder="Zadejte svůj e-mail">
+                <div class="notificationInput">
+                    <input type="email" class="emailInput" name="email" placeholder="Zadejte svůj e-mail">
+                    <div class="imageContainer">
+                        <img src="./svgs/camera.svg" alt="">
+                        <img src="./svgs/mic.svg" alt="">
+                        <img src="./svgs/search.svg" alt="">
+                    </div>
+                </div>
                 <button class="submitBtn btn blue">Odebírat</button>
             </form>
         </section>
@@ -220,19 +226,45 @@
 
         <!-- START FOOTER -->
         <footer class="footer full">
-            <h4>Sleduj nás</h4>
-            <ul class="socialMedia__links">
-                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-            <div class="footerInfo">
-                <p>Zapsaný spolek</p>
-                <p>Rybná 716/24, 110 00, Praha 1</p>
-                <p>IČ: 03961273</p>
-                <p>DIČ: CZ03961273</p>
+            <img class="desktopOnly ULogo" src="./svgs/Ulogo.svg" alt="">
+            <div class="footerContent">
+                <div class="socialMedia__container">
+                    <h4>Sleduj nás</h4>
+                    <ul class="socialMedia__links">
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footerInfo">
+                    <h4 class="desktopOnly">Vzděláváme česko
+                        v technologiích</h4>
+                    <div class="footerInfo__links">
+                        <ul>
+                            <li><a href="#">Zapsaný spolek</a></li>
+                            <li><a href="#">Rybná 716/24, 110 00, Praha 1</a></li>
+                            <li><a href="#">IČ: 03961273</a></li>
+                            <li><a href="#">DIČ: CZ03961273</a></li>
+                        </ul>
+                        <ul class="desktopOnly">
+                            <li><a href="#">Eventy</a></li>
+                            <li><a href="#">Iniciativy</a></li>
+                            <li><a href="#">GUGeři</a></li>
+                            <li><a href="#">O nás</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footerRights desktopOnly">
+                <div class="rightsCopyright">
+                    <p>© Copyright 2014 - 2020</p>
+                    <p>All rights reserved</p>
+                </div>
+                <div class="rightsMadeBy">
+                    <p>made with love from LX</p>
+                </div>
             </div>
         </footer>
         <!-- END FOOTER -->
